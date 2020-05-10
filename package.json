@@ -2,19 +2,14 @@
   "name": "react-hook-qrcode",
   "version": "1.0.1",
   "description": "React hooks for generating QR code.",
-  "main": "dist/react-hook-qrcode.js",
-  "module": "dist/react-hook-qrcode.es.js",
-  "types": "dist/qrcode.d.ts",
-  "unpkg": "dist/react-hook-qrcode.umd.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Bunlong <bunlong.van@gmail.com>",
   "license": "MIT",
-  "homepage": "https://react-hook-qrcode.github.io",
-  "repository": "https://github.com/Bunlong/react-hook-qrcode",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bunlong/react-hook-qrcode.git"
+  },
   "bugs": {
-    "url": "https://github.com/Bunlong/react-hook-qrcode/issues"
+    "url": "https://github.com/Bunlong/react-hook-qrcode.git/issues"
   },
   "keywords": [
     "react",
@@ -22,22 +17,55 @@
     "hooks",
     "react-hooks",
     "typescript",
-    "react-component"
+    "react-component",
+    "react-hook-qrcode"
   ],
+  "homepage": "https://react-hook-qrcode.github.io",
+  "main": "dist/react-hook-qrcode.js",
+  "module": "dist/react-hook-qrcode.es.js",
+  "jsnext:main": "dist/react-hook-qrcode.es.js",
+  "types": "dist/react-hook-qrcode.d.ts",
+  "@comment unpkg": "dist/react-hook-qrcode.umd.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "prettier": "prettier --write './src/*.ts' './src/*.tsx' --config ./.prettierrc",
+    "lint:check": "eslint ./src --ext .tsx,.ts --report-unused-disable-directives",
+    "dev": "rollup -c -w",
+    "prepare": "npm run build",
+    "predeploy": "cd docs && npm install && npm run build",
+    "deploy": "gh-pages -d docs/build"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@rollup/plugin-babel": "^5.0.0",
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^7.1.3",
-    "@rollup/plugin-typescript": "^4.1.1",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^7.0.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "mutationobserver-shim": "^0.3.5",
+    "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rollup": "^2.8.2",
-    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "tslib": "^1.11.2",
     "typescript": "^3.8.3"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "qr.js": "0.0.0"
   }
