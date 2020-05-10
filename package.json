@@ -32,7 +32,8 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "prettier": "prettier --write './src/*.ts' './src/*.tsx' --config ./.prettierrc",
+    "@comment prettier": "prettier --write './src/*.ts' './src/*.tsx' --config ./.prettierrc",
+    "prettier": "prettier --write './src/*.ts' --config ./.prettierrc",
     "lint:check": "eslint ./src --ext .tsx,.ts --report-unused-disable-directives",
     "dev": "rollup -c -w",
     "prepare": "npm run build",
