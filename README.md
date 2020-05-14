@@ -30,8 +30,8 @@ yarn add react-hook-qrcode
 ### usage
 
 ```js
-import React from "react";
-import { useQRCode } from "react-hook-qrcode";
+import React from 'react';
+import { useQRCode } from 'react-hook-qrcode';
 
 const App = () => {
   const [inputRef] = useQRCode({
@@ -42,8 +42,8 @@ const App = () => {
       scale: 1,
       width: 200,
       color: {
-        dark:"#010599FF",
-        light:"#FFBF60FF"
+        dark: '#010599FF',
+        light: '#FFBF60FF'
       }
     }
   });
@@ -158,8 +158,8 @@ const App = () => {
       scale: 4,
       width: 7,
       color: {
-        dark:"#010599FF",
-        light:"#FFBF60FF"
+        dark: '#010599FF',
+        light: '#FFBF60FF'
       }
     }
   });
