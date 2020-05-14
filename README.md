@@ -27,7 +27,7 @@ yarn add react-hook-qrcode
 
 ## 💡 Canvas
 
-**Usage**:
+### Usage:
 
 ```
 import React from "react";
@@ -185,50 +185,50 @@ export default App;
   <tbody>
     <tr>
       <td>type</td>
-      <td>string (`image/png`, `image/jpeg`, `image/webp`)</td>
-      <td>`image/png`</td>
+      <td>string (<code>image/png</code>, <code>image/jpeg</code>, <code>image/webp</code>)</td>
+      <td><code>image/png</code></td>
       <td>Image format.</td>
     </tr>
     <tr>
       <td>quality</td>
       <td>number</td>
-      <td>`0.92`</td>
-      <td>A Number between `0` and `1` indicating image quality if the type is `image/jpeg` or `image/webp`.</td>
+      <td><code>0.92</code></td>
+      <td>A Number between <code>0</code> and <code>1</code> indicating image quality if the type is <code>image/jpeg</code> or <code>image/webp</code>.</td>
     </tr>
     <tr>
       <td>level</td>
       <td>string</td>
-      <td>`M`</td>
-      <td>Correction level. Possible values are `low`, `medium`, `quartile`, `high` or `L`, `M`, `Q`, `H`.</td>
+      <td><code>M</code></td>
+      <td>Correction level. Possible values are <code>low</code>, <code>medium</code>, <code>quartile</code>, <code>high</code> or <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code>.</td>
     </tr>
     <tr>
       <td>margin</td>
       <td>number</td>
-      <td>`4`</td>
+      <td><code>4</code></td>
       <td>Define how much wide the quiet zone should be.</td>
     </tr>
     <tr>
       <td>scale</td>
       <td>number</td>
-      <td>`4`</td>
-      <td>Scale factor. A value of `1` means 1px per modules (black dots).</td>
+      <td><code>4</code></td>
+      <td>Scale factor. A value of <code>1</code> means 1px per modules (black dots).</td>
     </tr>
     <tr>
       <td>width</td>
       <td>number</td>
-      <td>`4`</td>
-      <td>Forces a specific width for the output image. If width is too small to contain the qr symbol, this option will be ignored. Takes precedence over `scale`.</td>
+      <td><code>4</code></td>
+      <td>Forces a specific width for the output image. If width is too small to contain the qr symbol, this option will be ignored. Takes precedence over <code>scale</code>.</td>
     </tr>
     <tr>
       <td>color.dark</td>
       <td>string</td>
-      <td>`#000000ff`</td>
-      <td>Color of dark module. Value must be in hex format (RGBA). Note: dark color should always be darker than `color.light`.</td>
+      <td><code>#000000ff</code></td>
+      <td>Color of dark module. Value must be in hex format (RGBA). Note: dark color should always be darker than <code>color.light</code>.</td>
     </tr>
     <tr>
       <td>color.light</td>
       <td>string</td>
-      <td>`#ffffffff`</td>
+      <td><code>#ffffffff</code></td>
       <td>Color of light module. Value must be in hex format (RGBA).</td>
     </tr>
   </tbody>
