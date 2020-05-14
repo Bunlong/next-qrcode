@@ -28,12 +28,12 @@ export default {
   external: [
     'react',
     'react-dom',
-    'fs',
-    'util',
-    'stream',
-    'buffer',
-    'zlib',
-    'assert'
+    // 'fs',
+    // 'util',
+    // 'stream',
+    // 'buffer',
+    // 'zlib',
+    // 'assert'
   ],
   plugins: [
     typescript({
@@ -49,8 +49,8 @@ export default {
     commonjs({
       extensions: ['.js', '.ts', '.tsx'],
     }),
-    globals(),
-    builtins(),
+    // globals(),
+    // builtins(),
     terser()
   ],
 };
