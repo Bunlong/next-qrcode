@@ -27,7 +27,7 @@ yarn add react-hook-qrcode
 
 ## 💡 Canvas
 
-### Usage:
+### usage
 
 ```
 import React from "react";
@@ -125,7 +125,7 @@ export default App;
 
 ## 💡 Image
 
-Usage:
+### usage
 
 ```
 import React from 'react';
