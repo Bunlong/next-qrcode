@@ -15,13 +15,13 @@ React hooks for generating QR code.
 
 react-hook-qrcode is available on npm. It can be installed with the following command:
 
-```
+```js
 npm install --save react-hook-qrcode
 ```
 
 react-hook-qrcode is available on yarn as well. It can be installed with the following command:
 
-```
+```js
 yarn add react-hook-qrcode
 ```
 
@@ -29,7 +29,7 @@ yarn add react-hook-qrcode
 
 ### usage
 
-```
+```js
 import React from "react";
 import { useQRCode } from "react-hook-qrcode";
 
@@ -127,7 +127,7 @@ export default App;
 
 ### usage
 
-```
+```js
 import React from 'react';
 import { useQRCode } from 'react-hook-qrcode';
 
