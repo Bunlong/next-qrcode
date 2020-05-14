@@ -202,6 +202,7 @@ export default App;
       <th>Prop</th>
       <th>Type</th>
       <th>Default</th>
+      <th>Require</th>
       <th>Description</th>
     </tr>
   <thead>
