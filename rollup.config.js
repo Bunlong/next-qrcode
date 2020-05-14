@@ -26,12 +26,6 @@ export default {
   external: [
     'react',
     'react-dom',
-    'fs',
-    'util',
-    'stream',
-    'buffer',
-    'zlib',
-    'assert'
   ],
   plugins: [
     typescript({
