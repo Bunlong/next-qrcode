@@ -33,7 +33,7 @@ yarn add react-hook-qrcode
 import React from 'react';
 import { useQRCode } from 'react-hook-qrcode';
 
-const App = () => {
+function App() {
   const [inputRef] = useQRCode({
     text: 'https://github.com/bunlong/react-hook-qrcode',
     options: {
@@ -147,7 +147,7 @@ export default App;
 import React from 'react';
 import { useQRCode } from 'react-hook-qrcode';
 
-const App = () => {
+function App() {
   const [inputRef] = useQRCode({
     text: 'https://github.com/bunlong/react-hook-qrcode',
     options: {
@@ -156,7 +156,7 @@ const App = () => {
       level: 'M',
       margin: 3,
       scale: 4,
-      width: 7,
+      width: 200,
       color: {
         dark: '#010599FF',
         light: '#FFBF60FF'

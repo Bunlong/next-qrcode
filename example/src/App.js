@@ -1,20 +1,22 @@
-import React from "react";
-import { useQRCode } from "react-hook-qrcode";
+import React from 'react';
+import { useQRCode } from 'react-hook-qrcode';
 
-const App = () => {
+function App() {
   const [inputRef] = useQRCode({
     text: 'https://github.com/bunlong/react-hook-qrcode',
     options: {
+      level: 'M',
+      margin: 7,
       scale: 1,
-      width: 300,
-      // color: {
-      //   dark:"#010599FF",
-      //   light:"#FFBF60FF"
-      // }
+      width: 200,
+      color: {
+        dark: '#010599FF',
+        light: '#FFBF60FF'
+      }
     }
   });
   
-  return <canvas ref={inputRef}></canvas>;
+  return <canvas ref={inputRef} />;
 };
 
 export default App;
@@ -22,18 +24,19 @@ export default App;
 // import React from 'react';
 // import { useQRCode } from 'react-hook-qrcode';
 
-// const App = () => {
+// function App() {
 //   const [inputRef] = useQRCode({
 //     text: 'https://github.com/bunlong/react-hook-qrcode',
 //     options: {
 //       type: 'image/jpeg',
 //       quality: 0.3,
-//       margin: 8,
-//       scale: 1,
+//       level: 'M',
+//       margin: 3,
+//       scale: 4,
 //       width: 200,
 //       color: {
-//         dark:"#010599FF",
-//         light:"#FFBF60FF"
+//         dark: '#010599FF',
+//         light: '#FFBF60FF'
 //       }
 //     }
 //   });
