@@ -1,0 +1,1 @@
+export { useQRCode } from './useQRCode';
