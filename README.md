@@ -6,7 +6,7 @@ React hooks for generating QR code.
 
 ## 🎁 Features
 
-* Support Canvas & Image
+* Render as Canvas & Image
 * Support Numeric, Alphanumeric, Kanji and Byte mode
 * Support Japanese, Chinese, Greek and Cyrillic characters
 * Support multibyte characters (like emojis smile)
@@ -37,6 +37,7 @@ const App = () => {
   const [inputRef] = useQRCode({
     text: 'https://github.com/bunlong/react-hook-qrcode',
     options: {
+      level: 'M',
       margin: 7,
       scale: 1,
       width: 200,
@@ -75,7 +76,7 @@ export default App;
       <td>options</td>
       <td>options</td>
       <td>❌</td>
-      <td></td>
+      <td>QR code options.</td>
     </tr>
   </tbody>
 </table>
@@ -152,7 +153,9 @@ const App = () => {
     options: {
       type: 'image/jpeg',
       quality: 0.3,
+      level: 'M',
       margin: 3,
+      scale: 4,
       width: 7,
       color: {
         dark:"#010599FF",
@@ -189,7 +192,7 @@ export default App;
       <td>options</td>
       <td>object</td>
       <td>❌</td>
-      <td></td>
+      <td>QR code options</td>
     </tr>
   </tbody>
 </table>

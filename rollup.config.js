@@ -2,12 +2,11 @@ import typescript from 'rollup-plugin-typescript2';
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-// import builtins from 'builtin-modules'
 import { terser } from "rollup-plugin-terser";
 import pkg from './package.json';
-import * as react from 'react';
-import * as reactDom from 'react-dom';
+
 // import external from 'rollup-plugin-peer-deps-external';
+// import builtins from 'builtin-modules'
 
 export default {
   input: 'src/react-hook-qrcode.ts',
@@ -27,6 +26,12 @@ export default {
   external: [
     'react',
     'react-dom',
+    'fs',
+    'util',
+    'stream',
+    'buffer',
+    'zlib',
+    'assert'
   ],
   plugins: [
     typescript({

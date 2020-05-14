@@ -5,13 +5,12 @@ const App = () => {
   const [inputRef] = useQRCode({
     text: 'https://github.com/bunlong/react-hook-qrcode',
     options: {
-      margin: 7,
       scale: 1,
-      width: 200,
-      color: {
-        dark:"#010599FF",
-        light:"#FFBF60FF"
-      }
+      width: 300,
+      // color: {
+      //   dark:"#010599FF",
+      //   light:"#FFBF60FF"
+      // }
     }
   });
   
