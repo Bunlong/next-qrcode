@@ -74,7 +74,7 @@ export default App;
     <tr>
       <td>options</td>
       <td>options</td>
-      <td></td>
+      <td>❌</td>
       <td></td>
     </tr>
   </tbody>
@@ -97,42 +97,42 @@ export default App;
       <td>level</td>
       <td>string</td>
       <td><code>M</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Correction level. Possible values are <code>low</code>, <code>medium</code>, <code>quartile</code>, <code>high</code> or <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code>.</td>
     </tr>
     <tr>
       <td>margin</td>
       <td>number</td>
       <td><code>4</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Define how much wide the quiet zone should be.</td>
     </tr>
     <tr>
       <td>scale</td>
       <td>number</td>
       <td><code>4</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Scale factor. A value of <code>1</code> means 1px per modules (black dots).</td>
     </tr>
     <tr>
       <td>width</td>
       <td>number</td>
       <td><code>4</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Forces a specific width for the output image. If width is too small to contain the qr symbol, this option will be ignored. Takes precedence over <code>scale</code>.</td>
     </tr>
     <tr>
       <td>color.dark</td>
       <td>string</td>
       <td><code>#000000ff</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Color of dark module. Value must be in hex format (RGBA). Note: dark color should always be darker than <code>color.light</code>.</td>
     </tr>
     <tr>
       <td>color.light</td>
       <td>string</td>
       <td><code>#ffffffff</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Color of light module. Value must be in hex format (RGBA).</td>
     </tr>
   </tbody>
@@ -174,6 +174,7 @@ export default App;
     <tr>
       <th>Prop</th>
       <th>Type</th>
+      <th>Require</th>
       <th>Description</th>
     </tr>
   <thead>
@@ -181,12 +182,13 @@ export default App;
     <tr>
       <td>text</td>
       <td>string</td>
+      <td>✔️</td>
       <td>Text/URL to encode.</td>
     </tr>
     <tr>
       <td>options</td>
       <td>object</td>
-      <td></td>
+      <td>❌</td>
       <td></td>
     </tr>
   </tbody>
@@ -208,56 +210,56 @@ export default App;
       <td>type</td>
       <td>string (<code>image/png</code>, <code>image/jpeg</code>, <code>image/webp</code>)</td>
       <td><code>image/png</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Image format.</td>
     </tr>
     <tr>
       <td>quality</td>
       <td>number</td>
       <td><code>0.92</code></td>
-      <td></td>
+      <td>❌</td>
       <td>A Number between <code>0</code> and <code>1</code> indicating image quality if the type is <code>image/jpeg</code> or <code>image/webp</code>.</td>
     </tr>
     <tr>
       <td>level</td>
       <td>string</td>
       <td><code>M</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Correction level. Possible values are <code>low</code>, <code>medium</code>, <code>quartile</code>, <code>high</code> or <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code>.</td>
     </tr>
     <tr>
       <td>margin</td>
       <td>number</td>
       <td><code>4</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Define how much wide the quiet zone should be.</td>
     </tr>
     <tr>
       <td>scale</td>
       <td>number</td>
       <td><code>4</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Scale factor. A value of <code>1</code> means 1px per modules (black dots).</td>
     </tr>
     <tr>
       <td>width</td>
       <td>number</td>
       <td><code>4</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Forces a specific width for the output image. If width is too small to contain the qr symbol, this option will be ignored. Takes precedence over <code>scale</code>.</td>
     </tr>
     <tr>
       <td>color.dark</td>
       <td>string</td>
       <td><code>#000000ff</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Color of dark module. Value must be in hex format (RGBA). Note: dark color should always be darker than <code>color.light</code>.</td>
     </tr>
     <tr>
       <td>color.light</td>
       <td>string</td>
       <td><code>#ffffffff</code></td>
-      <td></td>
+      <td>❌</td>
       <td>Color of light module. Value must be in hex format (RGBA).</td>
     </tr>
   </tbody>
