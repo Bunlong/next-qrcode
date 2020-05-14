@@ -29,7 +29,8 @@ module.exports = {
         "allowDestructuring": true, // Allow `const { props, state } = this`; false by default
         "allowedNames": ["self"] // Allow `const self = this`; `[]` by default
       }
-    ]
+    ],
+    '@typescript-eslint/no-var-requires': 0,
   },
   overrides: [
     {

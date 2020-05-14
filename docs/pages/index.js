@@ -1,20 +1,22 @@
-import React from "react";
-import { useQRCode } from "react-hook-qrcode";
+import React from 'react';
+import { useQRCode } from 'react-hook-qrcode';
 
-function Home() {
+function App() {
   const [inputRef] = useQRCode({
     text: 'https://github.com/bunlong/react-hook-qrcode',
     options: {
+      level: 'M',
+      margin: 7,
       scale: 1,
-      width: 300,
-      // color: {
-      //   dark:"#010599FF",
-      //   light:"#FFBF60FF"
-      // }
+      width: 200,
+      color: {
+        dark: '#010599FF',
+        light: '#FFBF60FF'
+      }
     }
   });
   
-  return <canvas ref={inputRef}></canvas>;
-}
+  return <canvas ref={inputRef} />;
+};
 
-export default Home;
+export default App;
