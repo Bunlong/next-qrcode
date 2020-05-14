@@ -27,7 +27,7 @@ yarn add react-hook-qrcode
 
 ## 💡 Canvas
 
-Usage:
+**Usage**:
 
 ```
 import React from "react";
@@ -53,7 +53,7 @@ const App = () => {
 export default App;
 ```
 
-**text**
+### text
 
 <table>
   <thead>
@@ -72,7 +72,7 @@ export default App;
   </tbody>
 </table>
 
-**options**
+### options
 
 <table>
   <thead>
@@ -152,7 +152,7 @@ const App = () => {
 export default App;
 ```
 
-**text**
+### text
 
 <table>
   <thead>
@@ -171,7 +171,7 @@ export default App;
   </tbody>
 </table>
 
-**options**
+### options
 
 <table>
   <thead>
