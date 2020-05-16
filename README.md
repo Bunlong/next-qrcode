@@ -11,6 +11,8 @@ React hooks for generating QR code.
 * Support Japanese, Chinese, Greek and Cyrillic characters
 * Support multibyte characters (like emojis smile)
 
+[Live Demo](https://react-hook-qrcode.github.io)
+
 ## 🔧 Install
 
 react-hook-qrcode is available on npm. It can be installed with the following command:
@@ -43,9 +45,9 @@ function App() {
       width: 200,
       color: {
         dark: '#010599FF',
-        light: '#FFBF60FF'
-      }
-    }
+        light: '#FFBF60FF',
+      },
+    },
   });
   
   return <canvas ref={inputRef} />;
@@ -54,7 +56,7 @@ function App() {
 export default App;
 ```
 
-### text
+### Parameters
 
 <table>
   <thead>
@@ -159,9 +161,9 @@ function App() {
       width: 200,
       color: {
         dark: '#010599FF',
-        light: '#FFBF60FF'
-      }
-    }
+        light: '#FFBF60FF',
+      },
+    },
   });
   
   return <img ref={inputRef} />;
@@ -170,7 +172,7 @@ function App() {
 export default App;
 ```
 
-### text
+### Parameters
 
 <table>
   <thead>

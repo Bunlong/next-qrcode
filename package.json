@@ -1,6 +1,6 @@
 {
   "name": "react-hook-qrcode",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "React hooks for generating QR code.",
   "author": "Bunlong <bunlong.van@gmail.com>",
   "license": "MIT",
