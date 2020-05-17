@@ -42,6 +42,9 @@ const styles = theme => ({
     opacity: '0.5',
     background: '#CCC',
   },
+  input: {
+    height: 38,
+  },
 });
 
 const levelOptions = [
@@ -288,6 +291,9 @@ const Index = (props) => {
                       onChange={handleChange}
                       disabled={includeOptions ? '' : 'disabled'}
                       type="number"
+                      InputProps={{
+                        className: classes.input
+                      }}
                     />
                   </Grid>
                 </Grid>
@@ -306,6 +312,9 @@ const Index = (props) => {
                       onChange={handleChange}
                       disabled={includeOptions ? '' : 'disabled'}
                       type="number"
+                      InputProps={{
+                        className: classes.input
+                      }}
                     />
                   </Grid>
                 </Grid>
@@ -324,6 +333,9 @@ const Index = (props) => {
                       onChange={handleChange}
                       disabled={includeOptions ? '' : 'disabled'}
                       type="number"
+                      InputProps={{
+                        className: classes.input
+                      }}
                     />
                   </Grid>
                 </Grid>

@@ -39,13 +39,3 @@ li {
   text-align: -webkit-match-parent;
   margin-bottom: 10px;
 }
-
-.MuiOutlinedInput-input-202,
-.MuiOutlinedInput-input-203,
-.MuiInputBase-root-208.MuiInputBase-disabled-211,
-.MuiOutlinedInput-multiline-201
-{
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  background-color: #FFF !important;
-}
