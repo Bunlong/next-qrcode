@@ -56,7 +56,7 @@ function App() {
 export default App;
 ```
 
-### Parameters
+### parameters
 
 <table>
   <thead>
@@ -172,7 +172,7 @@ function App() {
 export default App;
 ```
 
-### Parameters
+### parameters
 
 <table>
   <thead>
