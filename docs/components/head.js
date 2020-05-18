@@ -24,7 +24,7 @@ const Head = (props) => (
     
     <meta property='og:url' content='https://react-hook-qrcode.github.io' />
     <meta property='og:type' content='website' />
-    <meta property='og:title' content='react-hook-qrcode.png' />
+    <meta property='og:title' content='react-hook-qrcode' />
     <meta property='og:description' content='React hooks for generating QR code.' />
     <meta property='og:image' content='/static/react-hook-qrcode.png' />
 
