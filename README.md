@@ -1,8 +1,8 @@
-# react-hook-qrcode
+# react-qrcodes
 
 React hooks for generating QR code.
 
-[![NPM](https://img.shields.io/npm/v/react-hook-qrcode.svg)](https://www.npmjs.com/package/react-hook-qrcode) [![downloads](https://img.shields.io/npm/dm/react-hook-qrcode.svg?style=flat-square)](https://www.npmjs.com/package/react-hook-qrcode) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-hook-qrcode) [![Build Status](https://api.travis-ci.com/Bunlong/react-hook-qrcode.svg?branch=master)](https://travis-ci.com/Bunlong/react-hook-qrcode) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-qrcodes.svg)](https://www.npmjs.com/package/react-qrcodes) [![downloads](https://img.shields.io/npm/dm/react-qrcodes.svg?style=flat-square)](https://www.npmjs.com/package/react-qrcodes) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-qrcodes) [![Build Status](https://api.travis-ci.com/Bunlong/react-qrcodes.svg?branch=master)](https://travis-ci.com/Bunlong/react-qrcodes) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## 🎁 Features
 
@@ -15,16 +15,16 @@ React hooks for generating QR code.
 
 ## 🔧 Install
 
-react-hook-qrcode is available on npm. It can be installed with the following command:
+react-qrcodes is available on npm. It can be installed with the following command:
 
 ```js
-npm install --save react-hook-qrcode
+npm install react-qrcodes --save
 ```
 
-react-hook-qrcode is available on yarn as well. It can be installed with the following command:
+react-qrcodes is available on yarn as well. It can be installed with the following command:
 
 ```js
-yarn add react-hook-qrcode
+yarn add react-qrcodes
 ```
 
 ## 💡 Canvas
@@ -33,11 +33,11 @@ yarn add react-hook-qrcode
 
 ```js
 import React from 'react';
-import { useQRCode } from 'react-hook-qrcode';
+import { useQRCode } from 'react-qrcodes';
 
 function App() {
   const [inputRef] = useQRCode({
-    text: 'https://github.com/bunlong/react-hook-qrcode',
+    text: 'https://github.com/bunlong/react-qrcodes',
     options: {
       level: 'M',
       margin: 7,
@@ -147,11 +147,11 @@ export default App;
 
 ```js
 import React from 'react';
-import { useQRCode } from 'react-hook-qrcode';
+import { useQRCode } from 'react-qrcodes';
 
 function App() {
   const [inputRef] = useQRCode({
-    text: 'https://github.com/bunlong/react-hook-qrcode',
+    text: 'https://github.com/bunlong/react-qrcodes',
     options: {
       type: 'image/jpeg',
       quality: 0.3,
@@ -273,11 +273,11 @@ export default App;
 
 ## 💖 Wrap Up
 
-If you think any of the `react-hook-qrcode` can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this repository to revisit.
+If you think any of the `react-qrcodes` can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this repository to revisit.
 
 ## 🌟 Contribution
 
-We'd love to have your helping hand on contributions to `react-hook-qrcode` by forking and sending a pull request!
+We'd love to have your helping hand on contributions to `react-qrcodes` by forking and sending a pull request!
 
 Your contributions are heartily ♡ welcome, recognized and appreciated. (✿◠‿◠)
 

@@ -1,31 +1,34 @@
 {
-  "name": "react-hook-qrcode",
-  "version": "1.0.7",
+  "name": "react-qrcodes",
+  "version": "1.0.8",
   "description": "React hooks for generating QR code.",
   "author": "Bunlong <bunlong.van@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bunlong/react-hook-qrcode.git"
+    "url": "git+https://github.com/Bunlong/react-qrcodes.git"
   },
   "bugs": {
-    "url": "https://github.com/Bunlong/react-hook-qrcode.git/issues"
+    "url": "https://github.com/Bunlong/react-qrcodes.git/issues"
   },
   "keywords": [
     "react",
+    "reactjs",
     "qrcode",
+    "qrcodes",
     "hooks",
     "react-hooks",
     "typescript",
     "react-component",
-    "react-hook-qrcode"
+    "react-qrcode",
+    "react-qrcodes"
   ],
-  "homepage": "https://react-hook-qrcode.github.io",
-  "main": "dist/react-hook-qrcode.js",
-  "module": "dist/react-hook-qrcode.es.js",
-  "jsnext:main": "dist/react-hook-qrcode.es.js",
-  "types": "dist/react-hook-qrcode.d.ts",
-  "@comment unpkg": "dist/react-hook-qrcode.umd.js",
+  "homepage": "https://github.com/Bunlong/react-qrcodes",
+  "main": "dist/react-qrcodes.js",
+  "module": "dist/react-qrcodes.es.js",
+  "jsnext:main": "dist/react-qrcodes.es.js",
+  "types": "dist/react-qrcodes.d.ts",
+  "@comment unpkg": "dist/react-qrcodes.umd.js",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
@@ -75,7 +78,7 @@
   },
   "bundlesize": [
     {
-      "path": "./dist/react-hook-qrcode.es.js",
+      "path": "./dist/react-qrcodes.es.js",
       "maxSize": "50 kB"
     }
   ],
