@@ -1,6 +1,6 @@
 {
   "name": "react-qrcodes",
-  "version": "1.0.8",
+  "version": "1.0.7",
   "description": "React hooks for generating QR code.",
   "author": "Bunlong <bunlong.van@gmail.com>",
   "license": "MIT",
@@ -19,7 +19,7 @@
     "hooks",
     "react-hooks",
     "typescript",
-    "react-component",
+    "react-components",
     "react-qrcode",
     "react-qrcodes"
   ],
