@@ -1,29 +1,29 @@
 import { useRef, useEffect } from 'react';
 const QRCode = require('qrcode');
 
-interface Props {
+export interface ReactQRCodeProps {
   text: string;
-  options?: Options;
+  options?: ReactQRCodeOptions;
 }
 
-interface Options {
+export interface ReactQRCodeOptions {
   type?: string;
   quality?: number;
   level?: string;
   margin?: number;
   scale?: number;
   width?: number;
-  color?: Colors;
+  color?: ReactQRCodeColors;
 }
 
-interface Colors {
+export interface ReactQRCodeColors {
   dark?: string;
   light?: string;
 }
 
 export function useQRCode({
   ...props
-}: Props): React.MutableRefObject<undefined>[] {
+}: ReactQRCodeProps): React.MutableRefObject<undefined>[] {
   const inputRef = useRef();
   const { text, options } = props;
 
