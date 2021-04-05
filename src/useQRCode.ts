@@ -21,10 +21,10 @@ export interface ReactQRCodeColors {
   light?: string;
 }
 
-export function useQRCode({
+export function useQRCode<T extends HTMLCanvasElement | HTMLImageElement>({
   ...props
-}: ReactQRCodeProps): React.RefObject<HTMLCanvasElement | HTMLImageElement>[] {
-  const inputRef = useRef<HTMLCanvasElement | HTMLImageElement>(null);
+}: ReactQRCodeProps): React.RefObject<T>[] {
+  const inputRef = useRef<T>(null);
   const { text, options } = props;
 
   useEffect(
