@@ -36,7 +36,7 @@ import React from 'react';
 import { useQRCode } from 'react-qrcodes';
 
 function App() {
-  const [inputRef] = useQRCode({
+  const [inputRef] = useQRCode<HTMLCanvasElement>({
     text: 'https://github.com/bunlong/react-qrcodes',
     options: {
       level: 'M',
@@ -150,7 +150,7 @@ import React from 'react';
 import { useQRCode } from 'react-qrcodes';
 
 function App() {
-  const [inputRef] = useQRCode({
+  const [inputRef] = useQRCode<HTMLImageElement>({
     text: 'https://github.com/bunlong/react-qrcodes',
     options: {
       type: 'image/jpeg',
