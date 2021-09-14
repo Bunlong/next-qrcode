@@ -6,25 +6,23 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bunlong/next-share.git"
+    "url": "git+https://github.com/Bunlong/next-qrcode.git"
   },
   "bugs": {
-    "url": "https://github.com/Bunlong/next-share.git/issues"
+    "url": "https://github.com/Bunlong/next-qrcode.git/issues"
   },
   "keywords": [
     "react",
     "reactjs",
-    "next-share",
-    "share-buttons",
-    "social-share-buttons",
-    "social-media-share-buttons"
+    "next-qrcode",
+    "qrcode"
   ],
-  "homepage": "https://github.com/Bunlong/next-share",
-  "main": "dist/next-share.js",
-  "module": "dist/next-share.es.js",
-  "jsnext:main": "dist/next-share.es.js",
-  "types": "dist/next-share.d.ts",
-  "@comment unpkg": "dist/next-share.umd.js",
+  "homepage": "https://github.com/Bunlong/next-qrcode",
+  "main": "dist/next-qrcode.js",
+  "module": "dist/next-qrcode.es.js",
+  "jsnext:main": "dist/next-qrcode.es.js",
+  "types": "dist/next-qrcode.d.ts",
+  "@comment unpkg": "dist/next-qrcode.umd.js",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
