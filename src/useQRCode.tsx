@@ -23,7 +23,7 @@ interface Colors {
 
 export function useQRCode({
   ...props
-}: Props): React.MutableRefObject<undefined>[] {
+}: Props) {
   const inputRef = useRef();
   const { text, options } = props;
 
@@ -50,5 +50,5 @@ export function useQRCode({
     [text, options],
   );
 
-  return [inputRef];
+  return {inputRef};
 }
