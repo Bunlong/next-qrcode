@@ -1,35 +1,36 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 const QRCode = require('qrcode');
 
-export interface ReactQRCodeProps {
+export interface Props {
   text: string;
-  options?: ReactQRCodeOptions;
+  options?: Options;
 }
 
-export interface ReactQRCodeOptions {
+export interface Options {
   type?: string;
   quality?: number;
   level?: string;
   margin?: number;
   scale?: number;
   width?: number;
-  color?: ReactQRCodeColors;
+  color?: Colors;
 }
 
-export interface ReactQRCodeColors {
+export interface Colors {
   dark?: string;
   light?: string;
 }
 
 export function useQRCode<T extends HTMLCanvasElement | HTMLImageElement>({
   ...props
-}: ReactQRCodeProps): React.RefObject<T>[] {
-  const inputRef = useRef<T>(null);
+}: Props): any {
+  // : React.RefObject<T>[] {
+  const inputRef = React.useRef<T>(null);
   const { text, options } = props;
 
-  useEffect(
+  React.useEffect(
     function () {
-      if (inputRef.current) {
+      if (inputRef && inputRef.current) {
         if (inputRef.current instanceof HTMLCanvasElement) {
           QRCode.toCanvas(
             inputRef.current,
@@ -39,10 +40,10 @@ export function useQRCode<T extends HTMLCanvasElement | HTMLImageElement>({
               if (error) {
                 throw error;
               }
-            },
+            }
           );
         } else if (inputRef.current instanceof HTMLImageElement) {
-          QRCode.toDataURL(text, options, function (error: any, url: any) {
+          QRCode.toDataURL(text, options, function (error: any, url: string) {
             if (error) {
               throw error;
             }
@@ -53,8 +54,8 @@ export function useQRCode<T extends HTMLCanvasElement | HTMLImageElement>({
         }
       }
     },
-    [text, options, inputRef.current],
+    [text, options, inputRef.current]
   );
 
-  return [inputRef];
+  return { inputRef };
 }
