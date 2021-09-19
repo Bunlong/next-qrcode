@@ -40,7 +40,7 @@ export function useQRCode<T extends HTMLCanvasElement | HTMLImageElement>({
               if (error) {
                 throw error;
               }
-            }
+            },
           );
         } else if (inputRef.current instanceof HTMLImageElement) {
           QRCode.toDataURL(text, options, function (error: any, url: string) {
@@ -54,7 +54,7 @@ export function useQRCode<T extends HTMLCanvasElement | HTMLImageElement>({
         }
       }
     },
-    [text, options, inputRef.current]
+    [text, options, inputRef],
   );
 
   return { inputRef };
