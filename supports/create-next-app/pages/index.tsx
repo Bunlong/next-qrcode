@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import { useQRCode } from 'next-qrcode';
 
 export default function Home() {
-  const { inputRef } = useQRCode({
+  const { inputRef } = useQRCode<HTMLCanvasElement>({
     text: 'https://github.com/bunlong/react-qrcodes',
     options: {
       level: 'M',

@@ -14,8 +14,11 @@
   "keywords": [
     "react",
     "reactjs",
+    "qrcode",
     "next-qrcode",
-    "qrcode"
+    "next-plugin",
+    "nextjs-plugin",
+    "create-react-app"
   ],
   "homepage": "https://next-qrcode.github.io",
   "main": "dist/next-qrcode.js",
