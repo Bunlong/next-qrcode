@@ -1,12 +1,12 @@
-import { useRef, useEffect } from 'react';
+import React from 'react';
 const QRCode = require('qrcode');
 
-interface Props {
+export interface Props {
   text: string;
   options?: Options;
 }
 
-interface Options {
+export interface Options {
   type?: string;
   quality?: number;
   level?: string;
@@ -16,39 +16,46 @@ interface Options {
   color?: Colors;
 }
 
-interface Colors {
+export interface Colors {
   dark?: string;
   light?: string;
 }
 
-export function useQRCode({
+export function useQRCode<T extends HTMLCanvasElement | HTMLImageElement>({
   ...props
-}: Props) {
-  const inputRef = useRef();
+}: Props): any {
+  // : React.RefObject<T>[] {
+  const inputRef = React.useRef<T>(null);
   const { text, options } = props;
 
-  useEffect(
+  React.useEffect(
     function () {
-      if (inputRef) {
-        const ref = inputRef as any;
-        if (ref.current.tagName === 'CANVAS') {
-          QRCode.toCanvas(ref.current, text, options, function (error: any) {
+      if (inputRef && inputRef.current) {
+        if (inputRef.current instanceof HTMLCanvasElement) {
+          QRCode.toCanvas(
+            inputRef.current,
+            text,
+            options,
+            function (error: any) {
+              if (error) {
+                throw error;
+              }
+            }
+          );
+        } else if (inputRef.current instanceof HTMLImageElement) {
+          QRCode.toDataURL(text, options, function (error: any, url: string) {
             if (error) {
               throw error;
             }
-          });
-        } else {
-          QRCode.toDataURL(text, options, function (error: any, url: any) {
-            if (error) {
-              throw error;
+            if (inputRef.current instanceof HTMLImageElement) {
+              inputRef.current.src = url;
             }
-            ref.current.src = url;
           });
         }
       }
     },
-    [text, options],
+    [text, options, inputRef.current]
   );
 
-  return {inputRef};
+  return { inputRef };
 }
