@@ -2,7 +2,7 @@
 
 React hooks for generating QR code.
 
-[![NPM](https://img.shields.io/npm/v/next-qrcode.svg)](https://www.npmjs.com/package/next-qrcode) [![downloads](https://img.shields.io/npm/dm/next-qrcode.svg?style=flat-square)](https://www.npmjs.com/package/next-qrcode) ![npm bundle size](https://img.shields.io/bundlephobia/min/next-qrcode) [![Build Status](https://api.travis-ci.com/Bunlong/next-qrcode.svg?branch=master)](https://travis-ci.com/Bunlong/next-qrcode) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/next-qrcode.svg)](https://www.npmjs.com/package/next-qrcode) ![npm bundle size](https://img.shields.io/bundlephobia/min/next-qrcode) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## 🎁 Features
 
