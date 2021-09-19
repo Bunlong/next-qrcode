@@ -1,25 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
 
+import { useQRCode } from 'next-qrcode';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const { inputRef } = useQRCode({
+    text: 'https://github.com/bunlong/next-qrcode',
+    options: {
+      type: 'image/jpeg',
+      quality: 0.3,
+      level: 'M',
+      margin: 3,
+      scale: 4,
+      width: 200,
+      color: {
+        dark: '#010599FF',
+        light: '#FFBF60FF',
+      },
+    },
+  });
+
+  return <img ref={inputRef} />;
 }
 
 export default App;
