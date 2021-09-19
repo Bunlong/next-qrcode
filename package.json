@@ -17,7 +17,7 @@
     "next-qrcode",
     "qrcode"
   ],
-  "homepage": "https://github.com/Bunlong/next-qrcode",
+  "homepage": "https://next-qrcode.github.io",
   "main": "dist/next-qrcode.js",
   "module": "dist/next-qrcode.es.js",
   "jsnext:main": "dist/next-qrcode.es.js",
