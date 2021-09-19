@@ -36,7 +36,7 @@ import React from 'react';
 import { useQRCode } from 'next-qrcode';
 
 function App() {
-  const { inputRef } = useQRCode({
+  const { inputRef } = useQRCode<HTMLCanvasElement>({
     text: 'https://github.com/bunlong/next-qrcode',
     options: {
       level: 'M',
@@ -150,7 +150,7 @@ import React from 'react';
 import { useQRCode } from 'next-qrcode';
 
 function App() {
-  const { inputRef } = useQRCode({
+  const { inputRef } = useQRCode<HTMLImageElement>({
     text: 'https://github.com/bunlong/next-qrcode',
     options: {
       type: 'image/jpeg',
