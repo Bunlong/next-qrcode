@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 import { useQRCode } from 'next-qrcode';
 
 const Home: NextPage = () => {
-  const { inputRef } = useQRCode<HTMLCanvasElement>({
+  const { Image, Canvas } = useQRCode<HTMLCanvasElement>({
     text: 'https://github.com/bunlong/next-qrcode',
     options: {
       level: 'M',
@@ -19,7 +19,8 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
-      <canvas ref={inputRef} />
+      <Image text='' />
+      <Canvas text='' />
     </div>
   )
 }
