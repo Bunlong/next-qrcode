@@ -1,11 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from 'next'
 import styles from '../styles/Home.module.css'
 import { useQRCode } from 'next-qrcode';
 
-export default function Home() {
+const Home: NextPage = () => {
   const { inputRef } = useQRCode<HTMLCanvasElement>({
-    text: 'https://github.com/bunlong/react-qrcodes',
+    text: 'https://github.com/bunlong/next-qrcode',
     options: {
       level: 'M',
       margin: 7,
@@ -24,3 +23,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
