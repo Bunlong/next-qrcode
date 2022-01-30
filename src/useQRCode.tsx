@@ -52,10 +52,45 @@ function useImageComponent() {
   return Image;
 }
 
+function useCanvasComponent() {
+  const CanvasComponent = <T extends HTMLCanvasElement>({
+    text,
+    options,
+  }: IQRCode) => {
+    const inputRef = React.useRef<T>(null);
+
+    React.useEffect(
+      function () {
+        if (inputRef && inputRef.current) {
+          QRCode.toCanvas(
+            inputRef.current,
+            text,
+            options,
+            function (error: Error) {
+              if (error) {
+                throw error;
+              }
+            },
+          );
+        }
+      },
+      [text, options, inputRef],
+    );
+
+    return <canvas ref={inputRef} />;
+  };
+
+  const Canvas = React.useMemo(() => CanvasComponent, []);
+
+  return Canvas;
+}
+
 export function useQRCode() {
   const Image = useImageComponent();
+  const Canvas = useCanvasComponent();
 
   return {
     Image,
+    Canvas,
   };
 }
