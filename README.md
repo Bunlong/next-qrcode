@@ -6,12 +6,12 @@ React hooks for generating QR code for your next React apps.
 
 ## 🎁 Features
 
-* Render as Canvas & Image
+* Render Canvas & Image
 * Support Numeric, Alphanumeric, Kanji and Byte mode
 * Support Japanese, Chinese, Greek and Cyrillic characters
 * Support multibyte characters (like emojis smile)
 
-[Live Demo](https://next-qrcode.github.io)
+<!-- [Live Demo](https://next-qrcode.github.io) -->
 
 ## 🔧 Install
 
@@ -36,22 +36,26 @@ import React from 'react';
 import { useQRCode } from 'next-qrcode';
 
 function App() {
-  const { inputRef } = useQRCode<HTMLCanvasElement>({
-    text: 'https://github.com/bunlong/next-qrcode',
-    options: {
-      level: 'M',
-      margin: 7,
-      scale: 1,
-      width: 200,
-      color: {
-        dark: '#010599FF',
-        light: '#FFBF60FF',
-      },
-    },
-  });
-  
-  return <canvas ref={inputRef} />;
-};
+  const { Canvas } = useQRCode();
+
+  return (
+    <Canvas
+      text={'https://github.com/bunlong/next-qrcode'}
+      options={{
+        type: 'image/jpeg',
+        quality: 0.3,
+        level: 'M',
+        margin: 3,
+        scale: 4,
+        width: 200,
+        color: {
+          dark: '#010599FF',
+          light: '#FFBF60FF',
+        },
+      }}
+    />
+  );
+}
 
 export default App;
 ```
@@ -150,24 +154,26 @@ import React from 'react';
 import { useQRCode } from 'next-qrcode';
 
 function App() {
-  const { inputRef } = useQRCode<HTMLImageElement>({
-    text: 'https://github.com/bunlong/next-qrcode',
-    options: {
-      type: 'image/jpeg',
-      quality: 0.3,
-      level: 'M',
-      margin: 3,
-      scale: 4,
-      width: 200,
-      color: {
-        dark: '#010599FF',
-        light: '#FFBF60FF',
-      },
-    },
-  });
-  
-  return <img ref={inputRef} />;
-};
+  const { Image } = useQRCode();
+
+  return (
+    <Image
+      text={'https://github.com/bunlong/next-qrcode'}
+      options={{
+        type: 'image/jpeg',
+        quality: 0.3,
+        level: 'M',
+        margin: 3,
+        scale: 4,
+        width: 200,
+        color: {
+          dark: '#010599FF',
+          light: '#FFBF60FF',
+        },
+      }}
+    />
+  );
+}
 
 export default App;
 ```
@@ -291,69 +297,3 @@ How to contribute:
 ## ⚖️ License
 
 The MIT License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-<!-- 
-
-import React from 'react';
-const QRCode = require('qrcode');
-
-export interface Props {
-  text: string;
-  options?: Options;
-}
-
-export interface Options {
-  type?: string;
-  quality?: number;
-  level?: string;
-  margin?: number;
-  scale?: number;
-  width?: number;
-  color?: Colors;
-}
-
-export interface Colors {
-  dark?: string;
-  light?: string;
-}
-
-export function useQRCode<T extends HTMLCanvasElement | HTMLImageElement>({
-  ...props
-}: Props): any {
-  // : React.RefObject<T>[] {
-  const inputRef = React.useRef<T>(null);
-  const { text, options } = props;
-
-  React.useEffect(
-    function () {
-      if (inputRef && inputRef.current) {
-        if (inputRef.current instanceof HTMLCanvasElement) {
-          QRCode.toCanvas(
-            inputRef.current,
-            text,
-            options,
-            function (error: any) {
-              if (error) {
-                throw error;
-              }
-            },
-          );
-        } else if (inputRef.current instanceof HTMLImageElement) {
-          QRCode.toDataURL(text, options, function (error: any, url: string) {
-            if (error) {
-              throw error;
-            }
-            if (inputRef.current instanceof HTMLImageElement) {
-              inputRef.current.src = url;
-            }
-          });
-        }
-      }
-    },
-    [text, options, inputRef],
-  );
-
-  return { inputRef };
-}
-
--->
