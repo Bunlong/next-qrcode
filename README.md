@@ -279,7 +279,16 @@ export default App;
   </tbody>
 </table>
 
-## 💖 Wrap Up
+## 📜 Changelog
+
+Latest version 2.0.0 (2022-01-31):
+
+  * Improve code performance
+  * Rewrite any existing hooks
+
+Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/next-qrcode/blob/master/CHANGELOG.md).
+
+## ❗ Issues
 
 If you think any of the `next-qrcode` can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this repository to revisit.
 
@@ -329,6 +338,15 @@ How to contribute:
     </td>
   </tr>
 </table>
+
+## 👨‍👩‍👦 Advertisement
+
+You maybe interested.
+
+* [React Patterns](https://github.com/reactpatterns/reactpatterns) – React patterns & techniques to use in development for React Developer.
+* [React Patterns Blog](https://reactpatterns.js.org/blog) – The latest React news and articles.
+* [React Papaparse](https://github.com/Bunlong/react-papaparse) – The fastest in-browser CSV (or delimited text) parser for React.
+* [Next Share](https://github.com/Bunlong/next-share) – Social media share buttons for your next React apps.
 
 ## ⚖️ License
 
