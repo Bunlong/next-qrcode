@@ -1,9 +1,9 @@
 import React from 'react';
 const QRCode = require('qrcode');
 
-export interface Props {
-  text: string;
-  options?: Options;
+export interface Colors {
+  dark?: string;
+  light?: string;
 }
 
 export interface Options {
@@ -16,33 +16,21 @@ export interface Options {
   color?: Colors;
 }
 
-export interface Colors {
-  dark?: string;
-  light?: string;
+export interface IQRCode {
+  text: string;
+  options?: Options;
 }
 
-export function useQRCode<T extends HTMLCanvasElement | HTMLImageElement>({
-  ...props
-}: Props): any {
-  // : React.RefObject<T>[] {
-  const inputRef = React.useRef<T>(null);
-  const { text, options } = props;
+function useImageComponent() {
+  const ImageComponent = <T extends HTMLImageElement>({
+    text,
+    options,
+  }: IQRCode) => {
+    const inputRef = React.useRef<T>(null);
 
-  React.useEffect(
-    function () {
-      if (inputRef && inputRef.current) {
-        if (inputRef.current instanceof HTMLCanvasElement) {
-          QRCode.toCanvas(
-            inputRef.current,
-            text,
-            options,
-            function (error: any) {
-              if (error) {
-                throw error;
-              }
-            },
-          );
-        } else if (inputRef.current instanceof HTMLImageElement) {
+    React.useEffect(
+      function () {
+        if (inputRef && inputRef.current) {
           QRCode.toDataURL(text, options, function (error: any, url: string) {
             if (error) {
               throw error;
@@ -52,10 +40,57 @@ export function useQRCode<T extends HTMLCanvasElement | HTMLImageElement>({
             }
           });
         }
-      }
-    },
-    [text, options, inputRef],
-  );
+      },
+      [text, options, inputRef],
+    );
 
-  return { inputRef };
+    return <img ref={inputRef} />;
+  };
+
+  const Image = React.useMemo(() => ImageComponent, []);
+
+  return Image;
+}
+
+function useCanvasComponent() {
+  const CanvasComponent = <T extends HTMLCanvasElement>({
+    text,
+    options,
+  }: IQRCode) => {
+    const inputRef = React.useRef<T>(null);
+
+    React.useEffect(
+      function () {
+        if (inputRef && inputRef.current) {
+          QRCode.toCanvas(
+            inputRef.current,
+            text,
+            options,
+            function (error: Error) {
+              if (error) {
+                throw error;
+              }
+            },
+          );
+        }
+      },
+      [text, options, inputRef],
+    );
+
+    return <canvas ref={inputRef} />;
+  };
+
+  const Canvas = React.useMemo(() => CanvasComponent, []);
+
+  return Canvas;
+}
+
+export function useQRCode() {
+  const Image = useImageComponent();
+  const Canvas = useCanvasComponent();
+
+  return {
+    Image,
+    Canvas,
+  };
 }

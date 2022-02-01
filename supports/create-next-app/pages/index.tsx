@@ -1,26 +1,44 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next'
 import { useQRCode } from 'next-qrcode';
 
-export default function Home() {
-  const { inputRef } = useQRCode<HTMLCanvasElement>({
-    text: 'https://github.com/bunlong/react-qrcodes',
-    options: {
-      level: 'M',
-      margin: 7,
-      scale: 1,
-      width: 200,
-      color: {
-        dark: '#010599FF',
-        light: '#FFBF60FF',
-      },
-    },
-  });
+const Home: NextPage = () => {
+  const { Image, Canvas } = useQRCode();
 
   return (
-    <div className={styles.container}>
-      <canvas ref={inputRef} />
-    </div>
+    <>
+      <Image
+        text={'https://github.com/bunlong/next-qrcode'}
+        options={{
+          type: 'image/jpeg',
+          quality: 0.3,
+          level: 'M',
+          margin: 3,
+          scale: 4,
+          width: 200,
+          color: {
+            dark: '#010599FF',
+            light: '#FFBF60FF',
+          },
+        }}
+      />
+      <br />
+      <Canvas
+        text={'https://github.com/bunlong/next-qrcode'}
+        options={{
+          type: 'image/jpeg',
+          quality: 0.3,
+          level: 'M',
+          margin: 3,
+          scale: 4,
+          width: 200,
+          color: {
+            dark: '#010599FF',
+            light: '#FFBF60FF',
+          },
+        }}
+      />
+    </>
   )
 }
+
+export default Home

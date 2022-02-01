@@ -2,16 +2,18 @@
 
 React hooks for generating QR code for your next React apps.
 
+[![downloads](https://img.shields.io/npm/dm/next-qrcode.svg?label=monthly%20downloads)](https://www.npmjs.com/package/next-qrcode)
+
 [![NPM](https://img.shields.io/npm/v/next-qrcode.svg)](https://www.npmjs.com/package/next-qrcode) ![npm bundle size](https://img.shields.io/bundlephobia/min/next-qrcode) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## 🎁 Features
 
-* Render as Canvas & Image
+* Render Canvas & Image
 * Support Numeric, Alphanumeric, Kanji and Byte mode
 * Support Japanese, Chinese, Greek and Cyrillic characters
 * Support multibyte characters (like emojis smile)
 
-[Live Demo](https://next-qrcode.github.io)
+<!-- [Live Demo](https://next-qrcode.github.io) -->
 
 ## 🔧 Install
 
@@ -36,27 +38,31 @@ import React from 'react';
 import { useQRCode } from 'next-qrcode';
 
 function App() {
-  const { inputRef } = useQRCode<HTMLCanvasElement>({
-    text: 'https://github.com/bunlong/next-qrcode',
-    options: {
-      level: 'M',
-      margin: 7,
-      scale: 1,
-      width: 200,
-      color: {
-        dark: '#010599FF',
-        light: '#FFBF60FF',
-      },
-    },
-  });
-  
-  return <canvas ref={inputRef} />;
-};
+  const { Canvas } = useQRCode();
+
+  return (
+    <Canvas
+      text={'https://github.com/bunlong/next-qrcode'}
+      options={{
+        type: 'image/jpeg',
+        quality: 0.3,
+        level: 'M',
+        margin: 3,
+        scale: 4,
+        width: 200,
+        color: {
+          dark: '#010599FF',
+          light: '#FFBF60FF',
+        },
+      }}
+    />
+  );
+}
 
 export default App;
 ```
 
-### parameters
+### props
 
 <table>
   <thead>
@@ -150,29 +156,31 @@ import React from 'react';
 import { useQRCode } from 'next-qrcode';
 
 function App() {
-  const { inputRef } = useQRCode<HTMLImageElement>({
-    text: 'https://github.com/bunlong/next-qrcode',
-    options: {
-      type: 'image/jpeg',
-      quality: 0.3,
-      level: 'M',
-      margin: 3,
-      scale: 4,
-      width: 200,
-      color: {
-        dark: '#010599FF',
-        light: '#FFBF60FF',
-      },
-    },
-  });
-  
-  return <img ref={inputRef} />;
-};
+  const { Image } = useQRCode();
+
+  return (
+    <Image
+      text={'https://github.com/bunlong/next-qrcode'}
+      options={{
+        type: 'image/jpeg',
+        quality: 0.3,
+        level: 'M',
+        margin: 3,
+        scale: 4,
+        width: 200,
+        color: {
+          dark: '#010599FF',
+          light: '#FFBF60FF',
+        },
+      }}
+    />
+  );
+}
 
 export default App;
 ```
 
-### parameters
+### props
 
 <table>
   <thead>
@@ -271,7 +279,16 @@ export default App;
   </tbody>
 </table>
 
-## 💖 Wrap Up
+## 📜 Changelog
+
+Latest version 2.0.0 (2022-01-31):
+
+  * Improve code performance
+  * Rewrite any existing hooks
+
+Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/next-qrcode/blob/master/CHANGELOG.md).
+
+## ❗ Issues
 
 If you think any of the `next-qrcode` can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this repository to revisit.
 
@@ -287,6 +304,49 @@ How to contribute:
 - Discuss ideas in issues
 - Spread the word
 - Reach out with any feedback
+
+## 🏆 Contributors
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Bunlong">
+        <img src="https://avatars0.githubusercontent.com/u/1308397?s=400&u=945dc6b97571e2b98b659d34b1c81ae2514046bf&v=4" width="100" alt="Bunlong" />
+        <br />
+        <sub>
+          <b>Bunlong</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/desa">
+        <img src="https://avatars.githubusercontent.com/u/1477539?v=4" width="100" alt="Michael Desa" />
+        <br />
+        <sub>
+          <b>Michael Desa</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/jaredscheib">
+        <img src="https://avatars.githubusercontent.com/u/6403018?v=4" width="100" alt="" />
+        <br />
+        <sub>
+          <b>Jared Scheib</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+## 👨‍👩‍👦 Advertisement
+
+You maybe interested.
+
+* [React Patterns](https://github.com/reactpatterns/reactpatterns) – React patterns & techniques to use in development for React Developer.
+* [React Patterns Blog](https://reactpatterns.js.org/blog) – The latest React news and articles.
+* [React Papaparse](https://github.com/Bunlong/react-papaparse) – The fastest in-browser CSV (or delimited text) parser for React.
+* [Next Share](https://github.com/Bunlong/next-share) – Social media share buttons for your next React apps.
 
 ## ⚖️ License
 
