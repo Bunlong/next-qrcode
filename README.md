@@ -281,7 +281,7 @@ export default App;
 
 ## 📜 Changelog
 
-Latest version 2.0.0 (2022-01-31):
+Latest version 2.0.0 (2022-02-02):
 
   * Improve code performance
   * Rewrite any existing hooks
