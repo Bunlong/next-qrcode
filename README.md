@@ -281,10 +281,9 @@ export default App;
 
 ## 📜 Changelog
 
-Latest version 2.0.0 (2022-02-02):
+Latest version 2.1.0 (2022-06-02):
 
-  * Improve code performance
-  * Rewrite any existing hooks
+  * Support React 18
 
 Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/next-qrcode/blob/master/CHANGELOG.md).
 
