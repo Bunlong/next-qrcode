@@ -1,3 +1,13 @@
+## 2.2.0 (2022-08-14)
+
+### ✨ Features
+
+  * Update dependencies
+
+Credits
+
+* [@Bunlong](https://github.com/Bunlong)
+
 ## 2.1.0 (2022-06-02)
 
 ### ✨ Features

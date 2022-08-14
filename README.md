@@ -281,9 +281,9 @@ export default App;
 
 ## 📜 Changelog
 
-Latest version 2.1.0 (2022-06-02):
+Latest version 2.2.0 (2022-08-14):
 
-  * Support React 18
+  * Update dependencies
 
 Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/next-qrcode/blob/master/CHANGELOG.md).
 
