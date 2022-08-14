@@ -1,6 +1,6 @@
 {
   "name": "next-qrcode",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "React hooks for generating QR code for your next React apps.",
   "author": "Bunlong <bunlong.van@gmail.com>",
   "license": "MIT",
@@ -76,7 +76,7 @@
     "dist"
   ],
   "dependencies": {
-    "qrcode": "^1.4.4"
+    "qrcode": "^1.5.1"
   },
   "bundlesize": [
     {
