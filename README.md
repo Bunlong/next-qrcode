@@ -281,7 +281,7 @@ export default App;
 
 ## 📜 Changelog
 
-Latest version 2.2.0 (2022-08-14):
+Latest version 2.2.2 (2022-10-17):
 
   * Update dependencies
 
@@ -343,9 +343,9 @@ How to contribute:
 You maybe interested.
 
 * [React Patterns](https://github.com/reactpatterns/reactpatterns) – React patterns & techniques to use in development for React Developer.
-* [React Patterns Blog](https://reactpatterns.js.org/blog) – The latest React news and articles.
 * [React Papaparse](https://github.com/Bunlong/react-papaparse) – The fastest in-browser CSV (or delimited text) parser for React.
 * [Next Share](https://github.com/Bunlong/next-share) – Social media share buttons for your next React apps.
+* [Next Time Ago](https://github.com/Bunlong/next-time-ago) – A lightweight tiny time-ago component for your next React apps.
 
 ## ⚖️ License
 
