@@ -63,7 +63,7 @@
     "prettier": "^2.3.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.1",
     "react-test-renderer": "^18.1.0",
     "rollup": "^2.56.3",
     "rollup-plugin-terser": "^7.0.2",
