@@ -1,5 +1,6 @@
 import React from 'react';
 const QRCode = require('qrcode');
+// const { loadImage } = require('canvas');
 
 export interface Colors {
   dark?: string;
@@ -72,6 +73,20 @@ function useCanvasComponent() {
               }
             },
           );
+
+          const crt = inputRef.current;
+          const ctx = crt.getContext('2d');
+          if (ctx) {
+            const img = new Image();
+            img.src = 'https://cdn-icons-png.flaticon.com/512/124/124010.png';
+            const width = 200;
+            const cwidth = 50;
+            const center = (width - cwidth) / 2;
+            img.onload = function() {
+              ctx.drawImage(img, center, 100, cwidth, cwidth);
+            }
+          }
+
         }
       },
       [text, options, inputRef],
