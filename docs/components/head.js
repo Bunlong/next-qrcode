@@ -22,18 +22,18 @@ const Head = (props) => (
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
     <link rel="mask-icon" href="/static/favicon-mask.svg" color="#000000" />
     
-    <meta property='og:url' content='https://react-hook-qrcode.github.io' />
+    <meta property='og:url' content='https://next-qrcode.github.io' />
     <meta property='og:type' content='website' />
-    <meta property='og:title' content='react-hook-qrcode' />
+    <meta property='og:title' content='next-qrcode' />
     <meta property='og:description' content='React hooks for generating QR code.' />
-    <meta property='og:image' content='/static/react-hook-qrcode.png' />
+    <meta property='og:image' content='/static/next-qrcode.png' />
 
     <meta name='twitter:card' content='summary_large_image' />
     <meta name='twitter:site' content='@bunlongvan' />
     <meta name='twitter:creator' content='@bunlongvan' />
     <meta name='twitter:title' content='create-next-app' />
     <meta name='twitter:description' content='React hooks for generating QR code.' />
-    <meta name='twitter:image' content='https://react-hook-qrcode.github.io/static/react-hook-qrcode.png' />
+    <meta name='twitter:image' content='https://next-qrcode.github.io/static/next-qrcode.png' />
   </NextHead>
 )
 

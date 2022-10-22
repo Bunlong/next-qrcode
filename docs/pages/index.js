@@ -66,7 +66,7 @@ const Index = (props) => {
   const [darkColor, setDarkColor] = useState('#010599FF');
   const [displayLightColorPicker, setDisplayLightColorPicker] = useState(false);
   const [lightColor, setLightColor] = useState('#FFBF60FF');
-  const [text, setText] = useState('https://github.com/Bunlong/react-hook-qrcode');
+  const [text, setText] = useState('https://github.com/Bunlong/next-qrcode');
   const [margin, setMargin] = useState(0);
   const [scale, setScale] = useState(0);
   const [width, setWidth] = useState(4);
@@ -199,9 +199,9 @@ const Index = (props) => {
   return (
     <div>
       <Head
-        title="react-hook-qrcode"
+        title="next-qrcode"
         description="React hooks for generating QR code."
-        keywords="react, qrcode, react-hooks, hooks, typescript, react-hook-qrcode, react-components, javascript, qrcode-generator"
+        keywords="react, qrcode, react-hooks, hooks, typescript, next-qrcode, react-components, javascript, qrcode-generator"
       />
       <Nav />
       <div style={{ display: 'flex', margin: 40 }}>
@@ -391,7 +391,7 @@ const Index = (props) => {
                 disabled
                 className={classes.textField}
                 value={`import React from 'react';
-import { useQRCode } from 'react-hook-qrcode';
+import { useQRCode } from 'next-qrcode';
 
 function App() {
     const [inputRef] = useQRCode({
@@ -423,7 +423,7 @@ export default App;`}
       </div>
       <footer>
         <div>
-          react-hook-qrcode by <a href="https://github.com/Bunlong" target="_black">Bunlong</a>
+          next-qrcode by <a href="https://github.com/Bunlong" target="_black">Bunlong</a>
         </div>
       </footer>
     </div>

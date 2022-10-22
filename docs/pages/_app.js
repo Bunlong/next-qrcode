@@ -25,7 +25,7 @@ class MyApp extends App {
     return (
       <Container>
         <Head>
-          <title>react-hook-qrcode</title>
+          <title>next-qrcode</title>
         </Head>
         {/* Wrap every page in Jss and Theme providers */}
         <JssProvider
