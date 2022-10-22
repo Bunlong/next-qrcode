@@ -44,8 +44,6 @@ function App() {
     <Canvas
       text={'https://github.com/bunlong/next-qrcode'}
       options={{
-        type: 'image/jpeg',
-        quality: 0.3,
         level: 'M',
         margin: 3,
         scale: 4,
