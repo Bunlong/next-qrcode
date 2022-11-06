@@ -136,5 +136,3 @@ export function useQRCode() {
     Canvas,
   };
 }
-
-// https://stackoverflow.com/questions/64910446/how-to-add-logo-in-the-middle-of-the-qr-code-using-nodejs
