@@ -1,13 +1,12 @@
 import React from 'react';
 const QRCode = require('qrcode');
-// const { loadImage } = require('canvas');
 
 export interface Colors {
   dark?: string;
   light?: string;
 }
 
-export interface Options {
+export interface QRCodeOptions {
   type?: string;
   quality?: number;
   level?: string;
@@ -17,9 +16,21 @@ export interface Options {
   color?: Colors;
 }
 
+export interface LogoOptions {
+  x?: number;
+  y?: number;
+  width?: number;
+}
+
+export interface Logo {
+  src: string;
+  options?: LogoOptions;
+}
+
 export interface IQRCode {
   text: string;
-  options?: Options;
+  options?: QRCodeOptions;
+  logo?: Logo;
 }
 
 function useImageComponent() {
@@ -57,6 +68,7 @@ function useCanvasComponent() {
   const CanvasComponent = <T extends HTMLCanvasElement>({
     text,
     options,
+    logo,
   }: IQRCode) => {
     const inputRef = React.useRef<T>(null);
 
@@ -74,22 +86,37 @@ function useCanvasComponent() {
             },
           );
 
-          const crt = inputRef.current;
-          const ctx = crt.getContext('2d');
-          if (ctx) {
-            const img = new Image();
-            img.src = 'https://cdn-icons-png.flaticon.com/512/124/124010.png';
-            const width = 200;
-            const cwidth = 50;
-            const center = (width - cwidth) / 2;
-            img.onload = function() {
-              ctx.drawImage(img, center, 100, cwidth, cwidth);
+          if (logo) {
+            const crt = inputRef.current;
+            const ctx = crt.getContext('2d');
+            if (ctx) {
+              const img = new Image();
+              img.src = logo.src;
+              const logoWidth = logo?.options?.width || 30;
+              if (logo?.options?.x && logo?.options?.y) {
+                const x = logo?.options?.x;
+                const y = logo?.options?.y;
+                img.onload = function () {
+                  ctx.drawImage(img, x, y, logoWidth, logoWidth);
+                };
+              } else if (!logo?.options?.x || !logo?.options?.y) {
+                let margin = options?.margin;
+                if (!margin) {
+                  margin = margin === 0 ? 0 : 32;
+                } else if (margin) {
+                  margin = margin * 8;
+                }
+                const width = options?.width || 116 + margin;
+                const center = (width - logoWidth) / 2;
+                img.onload = function () {
+                  ctx.drawImage(img, center, center, logoWidth, logoWidth);
+                };
+              }
             }
           }
-
         }
       },
-      [text, options, inputRef],
+      [inputRef, text, options, logo],
     );
 
     return <canvas ref={inputRef} />;
@@ -109,3 +136,5 @@ export function useQRCode() {
     Canvas,
   };
 }
+
+// https://stackoverflow.com/questions/64910446/how-to-add-logo-in-the-middle-of-the-qr-code-using-nodejs

@@ -6,23 +6,29 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {/* <Canvas
+      <Canvas
         text={'https://github.com/bunlong/next-qrcode'}
         options={{
-          type: 'image/jpeg',
-          quality: 0.3,
           level: 'M',
-          margin: 3,
+          margin: 10,
           scale: 4,
-          width: 200,
-          color: {
-            dark: '#010599FF',
-            // light: '#FFBF60FF',
-          },
+          width: 400,
+          // color: {
+          //   dark: '#010599FF',
+          //   light: '#FFBF60FF',
+          // },
         }}
-      /> */}
+        logo={{
+          src: 'https://cdn-icons-png.flaticon.com/512/124/124010.png',
+          options: {
+            width: 50,
+            // x: 2,
+            // y: 2,
+          }
+        }}
+      />
 
-      <Image
+      {/* <Image
         text={'https://github.com/bunlong/next-qrcode'}
         options={{
           type: 'image/jpeg',
@@ -36,9 +42,18 @@ const Home: NextPage = () => {
             light: '#FFBF60FF',
           },
         }}
-      />
+      /> */}
     </>
   )
 }
 
 export default Home
+
+// logo={
+//   src: '',
+//   options: {
+//     x: '',
+//     y: '',
+//     width: 100,
+//   },
+// }
