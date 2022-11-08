@@ -17,9 +17,9 @@ export interface QRCodeOptions {
 }
 
 export interface LogoOptions {
+  width?: number;
   x?: number;
   y?: number;
-  width?: number;
 }
 
 export interface Logo {

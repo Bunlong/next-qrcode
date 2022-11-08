@@ -13,17 +13,17 @@ const Home: NextPage = () => {
           margin: 10,
           scale: 4,
           width: 400,
-          // color: {
-          //   dark: '#010599FF',
-          //   light: '#FFBF60FF',
-          // },
+          color: {
+            dark: '#010599FF',
+            light: '#FFBF60FF',
+          },
         }}
         logo={{
           src: 'https://cdn-icons-png.flaticon.com/512/124/124010.png',
           options: {
             width: 50,
-            // x: 2,
-            // y: 2,
+            x: 1,
+            y: 0,
           }
         }}
       />
