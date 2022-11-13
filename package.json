@@ -1,6 +1,6 @@
 {
   "name": "next-qrcode",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "React hooks for generating QR code for your next React apps.",
   "author": "Bunlong <bunlong.van@gmail.com>",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "react-qrcode",
     "create-react-app"
   ],
-  "homepage": "https://next-qrcode.github.io",
+  "homepage": "https://next-qrcode.js.org",
   "main": "dist/next-qrcode.js",
   "module": "dist/next-qrcode.es.js",
   "jsnext:main": "dist/next-qrcode.es.js",

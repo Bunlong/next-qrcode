@@ -151,7 +151,7 @@ export default App;
   </tbody>
 </table>
 
-### Logo
+### logo
 
 <table>
   <thead>
