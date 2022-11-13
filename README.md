@@ -349,9 +349,9 @@ export default App;
 
 ## 📜 Changelog
 
-Latest version 2.2.2 (2022-10-17):
+Latest version 2.3.0 (2022-11-14):
 
-  * Update dependencies
+  * Add logo to canvas
 
 Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/next-qrcode/blob/master/CHANGELOG.md).
 

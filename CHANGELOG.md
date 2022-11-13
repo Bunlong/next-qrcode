@@ -1,3 +1,13 @@
+## 2.3.0 (2022-11-14)
+
+### ✨ Features
+
+  * Add logo to canvas
+
+Credits
+
+* [@Bunlong](https://github.com/Bunlong)
+
 ## 2.2.2 (2022-10-17)
 
 ### ✨ Features
