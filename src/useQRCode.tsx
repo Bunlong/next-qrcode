@@ -101,8 +101,8 @@ function useCanvasComponent() {
                 };
               } else if (!logo?.options?.x || !logo?.options?.y) {
                 let margin = options?.margin;
-                margin = !margin ? (margin === 0 ? 0 : 32) : (margin * 8);
-                const width = options?.width || (116 + margin);
+                margin = !margin ? (margin === 0 ? 0 : 32) : margin * 8;
+                const width = options?.width || 116 + margin;
                 const center = (width - logoWidth) / 2;
                 img.onload = function () {
                   ctx.drawImage(img, center, center, logoWidth, logoWidth);
