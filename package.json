@@ -1,6 +1,6 @@
 {
   "name": "next-qrcode",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "React hooks for generating QR code for your next React apps.",
   "author": "Bunlong <bunlong.van@gmail.com>",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "react-qrcode",
     "create-react-app"
   ],
-  "homepage": "https://next-qrcode.github.io",
+  "homepage": "https://next-qrcode.js.org",
   "main": "dist/next-qrcode.js",
   "module": "dist/next-qrcode.es.js",
   "jsnext:main": "dist/next-qrcode.es.js",
@@ -55,6 +55,7 @@
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
     "bundlesize": "^0.18.1",
+    "canvas": "^2.10.1",
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",

@@ -6,7 +6,7 @@ export interface Colors {
   light?: string;
 }
 
-export interface Options {
+export interface QRCodeOptions {
   type?: string;
   quality?: number;
   level?: string;
@@ -16,9 +16,21 @@ export interface Options {
   color?: Colors;
 }
 
+export interface LogoOptions {
+  width?: number;
+  x?: number;
+  y?: number;
+}
+
+export interface Logo {
+  src: string;
+  options?: LogoOptions;
+}
+
 export interface IQRCode {
   text: string;
-  options?: Options;
+  options?: QRCodeOptions;
+  logo?: Logo;
 }
 
 function useImageComponent() {
@@ -56,6 +68,7 @@ function useCanvasComponent() {
   const CanvasComponent = <T extends HTMLCanvasElement>({
     text,
     options,
+    logo,
   }: IQRCode) => {
     const inputRef = React.useRef<T>(null);
 
@@ -72,9 +85,34 @@ function useCanvasComponent() {
               }
             },
           );
+
+          if (logo) {
+            const crt = inputRef.current;
+            const ctx = crt.getContext('2d');
+            if (ctx) {
+              const img = new Image();
+              img.src = logo.src;
+              const logoWidth = logo?.options?.width || 30;
+              if (logo?.options?.x && logo?.options?.y) {
+                const x = logo?.options?.x;
+                const y = logo?.options?.y;
+                img.onload = function () {
+                  ctx.drawImage(img, x, y, logoWidth, logoWidth);
+                };
+              } else if (!logo?.options?.x || !logo?.options?.y) {
+                let margin = options?.margin;
+                margin = !margin ? (margin === 0 ? 0 : 32) : (margin * 8);
+                const width = options?.width || (116 + margin);
+                const center = (width - logoWidth) / 2;
+                img.onload = function () {
+                  ctx.drawImage(img, center, center, logoWidth, logoWidth);
+                };
+              }
+            }
+          }
         }
       },
-      [text, options, inputRef],
+      [inputRef, text, options, logo],
     );
 
     return <canvas ref={inputRef} />;

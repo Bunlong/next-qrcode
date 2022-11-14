@@ -31,7 +31,7 @@ yarn add next-qrcode
 
 ## 💡 Canvas
 
-### usage
+### Usage
 
 ```js
 import React from 'react';
@@ -60,7 +60,7 @@ function App() {
 export default App;
 ```
 
-### props
+### Canvas props
 
 <table>
   <thead>
@@ -81,6 +81,12 @@ export default App;
     <tr>
       <td>options</td>
       <td>options</td>
+      <td>❌</td>
+      <td>QR code options.</td>
+    </tr>
+    <tr>
+      <td>logo</td>
+      <td>logo</td>
       <td>❌</td>
       <td>QR code options.</td>
     </tr>
@@ -145,9 +151,73 @@ export default App;
   </tbody>
 </table>
 
+### logo
+
+<table>
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Require</th>
+      <th>Description</th>
+    </tr>
+  <thead>
+  <tbody>
+    <tr>
+      <td>src</td>
+      <td>string</td>
+      <td>✔️</td>
+      <td>The path to the image</td>
+    </tr>
+    <tr>
+      <td>options</td>
+      <td>options</td>
+      <td>❌</td>
+      <td>Logo options</td>
+    </tr>
+  </tbody>
+</table>
+
+### options
+
+<table>
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Require</th>
+      <th>Description</th>
+    </tr>
+  <thead>
+  <tbody>
+    <tr>
+      <td>width</td>
+      <td>number</td>
+      <td></td>
+      <td>❌</td>
+      <td>Logo dimension.</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>number</td>
+      <td></td>
+      <td>❌</td>
+      <td>If none, will center.</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>number</td>
+      <td></td>
+      <td>❌</td>
+      <td>If none, will center.</td>
+    </tr>
+  </tbody>
+</table>
+
 ## 💡 Image
 
-### usage
+### Usage
 
 ```js
 import React from 'react';
@@ -178,7 +248,7 @@ function App() {
 export default App;
 ```
 
-### props
+### Image props
 
 <table>
   <thead>
@@ -279,9 +349,9 @@ export default App;
 
 ## 📜 Changelog
 
-Latest version 2.2.2 (2022-10-17):
+Latest version 2.3.0 (2022-11-14):
 
-  * Update dependencies
+  * Add logo to canvas
 
 Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/next-qrcode/blob/master/CHANGELOG.md).
 
