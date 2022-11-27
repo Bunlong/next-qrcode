@@ -123,12 +123,40 @@ function useCanvasComponent() {
   return Canvas;
 }
 
+function useSVGComponent() {
+  const SVGComponent = <T extends HTMLDivElement>({
+    text,
+    options,
+  }: IQRCode) => {
+    const inputRef = React.useRef<T>(null);
+
+    React.useEffect(() => {
+      QRCode.toString(text, options, function (error: Error, svg: string) {
+        if (error) {
+          throw error;
+        }
+        if (inputRef.current instanceof HTMLDivElement) {
+          inputRef.current.innerHTML = svg;
+        }
+      });
+    }, [text, options]);
+
+    return <div ref={inputRef} />;
+  };
+
+  const SVG = React.useMemo(() => SVGComponent, []);
+
+  return SVG;
+}
+
 export function useQRCode() {
   const Image = useImageComponent();
   const Canvas = useCanvasComponent();
+  const SVG = useSVGComponent();
 
   return {
     Image,
     Canvas,
+    SVG,
   };
 }
