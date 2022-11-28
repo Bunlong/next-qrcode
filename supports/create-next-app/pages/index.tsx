@@ -64,12 +64,3 @@ const Home: NextPage = () => {
 }
 
 export default Home
-
-// logo={
-//   src: '',
-//   options: {
-//     x: '',
-//     y: '',
-//     width: 100,
-//   },
-// }
