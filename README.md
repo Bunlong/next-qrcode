@@ -8,12 +8,12 @@ React hooks for generating QR code for your next React apps.
 
 ## 🎁 Features
 
-* Render Canvas & Image
+* Render Canvas, SVG and Image
 * Support Numeric, Alphanumeric, Kanji and Byte mode
 * Support Japanese, Chinese, Greek and Cyrillic characters
 * Support multibyte characters (like emojis smile)
 
-<!-- [Live Demo](https://next-qrcode.github.io) -->
+[Live Demo](https://next-qrcode.js.org)
 
 ## 🔧 Install
 
@@ -215,6 +215,128 @@ export default App;
   </tbody>
 </table>
 
+## 💡 SVG
+
+### Usage
+
+```js
+import React from 'react';
+import { useQRCode } from 'next-qrcode';
+
+function App() {
+  const { SVG } = useQRCode();
+
+  return (
+    <SVG
+      text={'https://github.com/bunlong/next-qrcode'}
+      options={{
+        level: 'M',
+        margin: 3,
+        scale: 4,
+        width: 200,
+        color: {
+          dark: '#010599FF',
+          light: '#FFBF60FF',
+        },
+      }}
+    />
+  );
+}
+
+export default App;
+```
+
+### SVG props
+
+<table>
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Require</th>
+      <th>Description</th>
+    </tr>
+  <thead>
+  <tbody>
+    <tr>
+      <td>text</td>
+      <td>string</td>
+      <td>✔️</td>
+      <td>Text/URL to encode.</td>
+    </tr>
+    <tr>
+      <td>options</td>
+      <td>options</td>
+      <td>❌</td>
+      <td>QR code options.</td>
+    </tr>
+    <tr>
+      <td>logo</td>
+      <td>logo</td>
+      <td>❌</td>
+      <td>QR code options.</td>
+    </tr>
+  </tbody>
+</table>
+
+### options
+
+<table>
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Require</th>
+      <th>Description</th>
+    </tr>
+  <thead>
+  <tbody>
+    <tr>
+      <td>level</td>
+      <td>string</td>
+      <td><code>M</code></td>
+      <td>❌</td>
+      <td>Correction level. Possible values are <code>low</code>, <code>medium</code>, <code>quartile</code>, <code>high</code> or <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code>.</td>
+    </tr>
+    <tr>
+      <td>margin</td>
+      <td>number</td>
+      <td><code>4</code></td>
+      <td>❌</td>
+      <td>Define how much wide the quiet zone should be.</td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td>number</td>
+      <td><code>4</code></td>
+      <td>❌</td>
+      <td>Scale factor. A value of <code>1</code> means 1px per modules (black dots).</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>number</td>
+      <td><code>4</code></td>
+      <td>❌</td>
+      <td>Forces a specific width for the output image. If width is too small to contain the qr symbol, this option will be ignored. Takes precedence over <code>scale</code>.</td>
+    </tr>
+    <tr>
+      <td>color.dark</td>
+      <td>string</td>
+      <td><code>#000000ff</code></td>
+      <td>❌</td>
+      <td>Color of dark module. Value must be in hex format (RGBA). Note: dark color should always be darker than <code>color.light</code>.</td>
+    </tr>
+    <tr>
+      <td>color.light</td>
+      <td>string</td>
+      <td><code>#ffffffff</code></td>
+      <td>❌</td>
+      <td>Color of light module. Value must be in hex format (RGBA).</td>
+    </tr>
+  </tbody>
+</table>
+
 ## 💡 Image
 
 ### Usage
@@ -349,9 +471,9 @@ export default App;
 
 ## 📜 Changelog
 
-Latest version 2.3.0 (2022-11-14):
+Latest version 2.4.0 (2022-11-29):
 
-  * Add logo to canvas
+  * Add SVG
 
 Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/next-qrcode/blob/master/CHANGELOG.md).
 
