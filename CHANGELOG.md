@@ -1,3 +1,13 @@
+## 2.4.0 (2022-11-29)
+
+### ✨ Features
+
+  * Add SVG
+
+Credits
+
+* [@Bunlong](https://github.com/Bunlong)
+
 ## 2.3.0 (2022-11-14)
 
 ### ✨ Features

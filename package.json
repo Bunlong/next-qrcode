@@ -1,6 +1,6 @@
 {
   "name": "next-qrcode",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "React hooks for generating QR code for your next React apps.",
   "author": "Bunlong <bunlong.van@gmail.com>",
   "license": "MIT",
