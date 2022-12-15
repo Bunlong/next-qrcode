@@ -1,11 +1,11 @@
 import { useQRCode } from 'next-qrcode';
 
 function App() {
-  const { Canvas } = useQRCode();
+  const { SVG } = useQRCode();
 
   return (
     <>
-      <Canvas
+      <SVG
         text={'https://github.com/bunlong/next-qrcode'}
         options={{
           type: 'image/jpeg',

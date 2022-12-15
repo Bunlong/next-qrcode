@@ -1178,7 +1178,7 @@
 
 "next-qrcode@file:../..":
   "resolved" "file:../.."
-  "version" "2.2.2"
+  "version" "2.4.0"
   dependencies:
     "qrcode" "^1.5.1"
 
