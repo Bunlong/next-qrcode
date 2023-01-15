@@ -47,16 +47,24 @@ const Home: NextPage = () => {
       <SVG
         text={'https://github.com/bunlong/next-qrcode'}
         options={{
-          type: 'image/jpeg',
-          quality: 0.3,
-          level: 'M',
+          // type: 'svg',
+          // quality: 0.3,
+          // level: 'M',
+          // scale: 4,
           margin: 3,
-          scale: 4,
           width: 200,
           color: {
             dark: '#010599FF',
             light: '#FFBF60FF',
           },
+        }}
+        logo={{
+          src: 'https://cdn-icons-png.flaticon.com/512/124/124010.png',
+          options: {
+            width: 5,
+            x: 1,
+            y: 0,
+          }
         }}
       />
     </>

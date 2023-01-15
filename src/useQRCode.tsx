@@ -127,19 +127,43 @@ function useSVGComponent() {
   const SVGComponent = <T extends HTMLDivElement>({
     text,
     options,
+    logo,
   }: IQRCode) => {
     const inputRef = React.useRef<T>(null);
-
     React.useEffect(() => {
       QRCode.toString(text, options, function (error: Error, svg: string) {
         if (error) {
           throw error;
         }
+        let _svg = '';
+        let x = 0;
+        let y = 0;
+        if (logo) {
+          const logoWidth = logo?.options?.width || 30;
+          if (logo?.options?.x && logo?.options?.y) {
+            x = logo?.options?.x;
+            y = logo?.options?.y;
+          } else if (!logo?.options?.x || !logo?.options?.y) {
+            // let margin = options?.margin;
+            // margin = !margin ? (margin === 0 ? 0 : 32) : margin * 8;
+            // const width = options?.width || 116 + margin;
+            // const center = (width - logoWidth) / 2;
+          }
+          const image = `<image xlink:href=${logo?.src} width="${logoWidth}" height=${logoWidth} x=${x} y=${y} preserveAspectRatio="none" />`;
+          const position = svg.indexOf('</svg>');
+          _svg = [
+            svg.slice(0, position),
+            image,
+            svg.slice(position),
+          ].join('');
+        } else {
+          _svg = svg;
+        }
         if (inputRef.current instanceof HTMLDivElement) {
-          inputRef.current.innerHTML = svg;
+          inputRef.current.innerHTML = _svg;
         }
       });
-    }, [text, options]);
+    }, [text, options, logo]);
 
     return <div ref={inputRef} />;
   };
