@@ -93,13 +93,22 @@ function useCanvasComponent() {
               const img = new Image();
               img.src = logo.src;
               const logoWidth = logo?.options?.width || 30;
-              if (logo?.options?.x && logo?.options?.y) {
-                const x = logo?.options?.x;
-                const y = logo?.options?.y;
+              if (
+                logo?.options?.hasOwnProperty('x') &&
+                logo?.options?.hasOwnProperty('y')
+              ) {
+                const x = logo?.options?.x || 0;
+                const y = logo?.options?.y || 0;
                 img.onload = function () {
                   ctx.drawImage(img, x, y, logoWidth, logoWidth);
                 };
-              } else if (!logo?.options?.x || !logo?.options?.y) {
+              }
+              if (
+                !logo?.options?.hasOwnProperty('x') ||
+                !logo?.options?.hasOwnProperty('y') ||
+                logo?.options?.x === undefined ||
+                logo?.options?.y === undefined
+              ) {
                 let margin = options?.margin;
                 margin = !margin ? (margin === 0 ? 0 : 32) : margin * 8;
                 const width = options?.width || 116 + margin;
