@@ -230,9 +230,7 @@ function App() {
     <SVG
       text={'https://github.com/bunlong/next-qrcode'}
       options={{
-        level: 'M',
         margin: 3,
-        scale: 4,
         width: 200,
         color: {
           dark: '#010599FF',
@@ -270,12 +268,6 @@ export default App;
       <td>❌</td>
       <td>QR code options.</td>
     </tr>
-    <tr>
-      <td>logo</td>
-      <td>logo</td>
-      <td>❌</td>
-      <td>QR code options.</td>
-    </tr>
   </tbody>
 </table>
 
@@ -293,25 +285,11 @@ export default App;
   <thead>
   <tbody>
     <tr>
-      <td>level</td>
-      <td>string</td>
-      <td><code>M</code></td>
-      <td>❌</td>
-      <td>Correction level. Possible values are <code>low</code>, <code>medium</code>, <code>quartile</code>, <code>high</code> or <code>L</code>, <code>M</code>, <code>Q</code>, <code>H</code>.</td>
-    </tr>
-    <tr>
       <td>margin</td>
       <td>number</td>
       <td><code>4</code></td>
       <td>❌</td>
       <td>Define how much wide the quiet zone should be.</td>
-    </tr>
-    <tr>
-      <td>scale</td>
-      <td>number</td>
-      <td><code>4</code></td>
-      <td>❌</td>
-      <td>Scale factor. A value of <code>1</code> means 1px per modules (black dots).</td>
     </tr>
     <tr>
       <td>width</td>
