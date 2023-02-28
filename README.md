@@ -88,7 +88,7 @@ export default App;
       <td>logo</td>
       <td>logo</td>
       <td>❌</td>
-      <td>QR code options.</td>
+      <td>QR code logo.</td>
     </tr>
   </tbody>
 </table>
@@ -167,13 +167,13 @@ export default App;
       <td>src</td>
       <td>string</td>
       <td>✔️</td>
-      <td>The path to the image</td>
+      <td>The path to the image.</td>
     </tr>
     <tr>
       <td>options</td>
       <td>options</td>
       <td>❌</td>
-      <td>Logo options</td>
+      <td>Logo options.</td>
     </tr>
   </tbody>
 </table>
