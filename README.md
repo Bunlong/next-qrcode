@@ -203,14 +203,14 @@ export default App;
       <td>number</td>
       <td></td>
       <td>❌</td>
-      <td>If none, will center.</td>
+      <td>If none or undefined, will center.</td>
     </tr>
     <tr>
       <td>y</td>
       <td>number</td>
       <td></td>
       <td>❌</td>
-      <td>If none, will center.</td>
+      <td>If none or undefined, will center.</td>
     </tr>
   </tbody>
 </table>
