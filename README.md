@@ -230,7 +230,7 @@ function App() {
     <SVG
       text={'https://github.com/bunlong/next-qrcode'}
       options={{
-        margin: 3,
+        margin: 2,
         width: 200,
         color: {
           dark: '#010599FF',
