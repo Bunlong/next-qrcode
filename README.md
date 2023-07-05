@@ -13,7 +13,7 @@ React hooks for generating QR code for your next React apps.
 * Support Japanese, Chinese, Greek and Cyrillic characters
 * Support multibyte characters (like emojis smile)
 
-[Live Demo](https://next-qrcode.js.org)
+[Live Demo](https://next-qrcode.js.org/demo)
 
 ## 🔧 Install
 
