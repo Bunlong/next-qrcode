@@ -449,9 +449,9 @@ export default App;
 
 ## 📜 Changelog
 
-Latest version 2.4.1 (2023-02-28):
+Latest version 2.5.0 (2023-07-05):
 
-  * Fix setting logo to center
+  * Upgrade dependencies
 
 Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/next-qrcode/blob/master/CHANGELOG.md).
 
