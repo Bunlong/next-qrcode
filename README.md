@@ -26,7 +26,7 @@ npm install next-qrcode --save
 next-qrcode is available on yarn as well. It can be installed with the following command:
 
 ```js
-yarn add next-qrcode
+yarn add next-qrcode --save
 ```
 
 ## 💡 Canvas
