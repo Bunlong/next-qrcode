@@ -6,9 +6,13 @@ export interface Colors {
   light?: string;
 }
 
+type QRCodeQuality = "low" | "medium" | "quartile" | "high" | "L" | "M" | "Q" | "H";
+
+type ImageType = "image/png" |  "image/jpeg" |  "image/webp"
+
 export interface QRCodeOptions {
-  type?: string;
-  quality?: number;
+  type?: ImageType;
+  quality?: QRCodeQuality;
   level?: string;
   margin?: number;
   scale?: number;
