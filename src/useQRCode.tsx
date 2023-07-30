@@ -9,7 +9,7 @@ export interface Colors {
 export interface QRCodeOptions {
   type?: string;
   quality?: number;
-  level?: string;
+  errorCorrectionLevel?: string;
   margin?: number;
   scale?: number;
   width?: number;

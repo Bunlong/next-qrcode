@@ -9,7 +9,7 @@ const Home: NextPage = () => {
       <Canvas
         text={'https://github.com/bunlong/next-qrcode'}
         options={{
-          level: 'M',
+          errorCorrectionLevel: 'M',
           margin: 1,
           scale: 4,
           width: 200,
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
         options={{
           type: 'image/jpeg',
           quality: 0.3,
-          level: 'M',
+          errorCorrectionLevel: 'M',
           margin: 3,
           scale: 4,
           width: 200,

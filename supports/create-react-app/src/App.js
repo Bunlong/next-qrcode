@@ -10,7 +10,7 @@ function App() {
         options={{
           type: 'image/jpeg',
           quality: 0.3,
-          level: 'M',
+          errorCorrectionLevel: 'M',
           margin: 3,
           scale: 4,
           width: 200,

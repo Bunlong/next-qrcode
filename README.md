@@ -44,7 +44,7 @@ function App() {
     <Canvas
       text={'https://github.com/bunlong/next-qrcode'}
       options={{
-        level: 'M',
+        errorCorrectionLevel: 'M',
         margin: 3,
         scale: 4,
         width: 200,
@@ -107,7 +107,7 @@ export default App;
   <thead>
   <tbody>
     <tr>
-      <td>level</td>
+      <td>errorCorrectionLevel</td>
       <td>string</td>
       <td><code>M</code></td>
       <td>❌</td>
@@ -332,7 +332,7 @@ function App() {
       options={{
         type: 'image/jpeg',
         quality: 0.3,
-        level: 'M',
+        errorCorrectionLevel: 'M',
         margin: 3,
         scale: 4,
         width: 200,
@@ -403,7 +403,7 @@ export default App;
       <td>A Number between <code>0</code> and <code>1</code> indicating image quality if the type is <code>image/jpeg</code> or <code>image/webp</code>.</td>
     </tr>
     <tr>
-      <td>level</td>
+      <td>errorCorrectionLevel</td>
       <td>string</td>
       <td><code>M</code></td>
       <td>❌</td>
