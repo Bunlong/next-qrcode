@@ -496,10 +496,19 @@ How to contribute:
     </td>
     <td align="center">
       <a href="https://github.com/jaredscheib">
-        <img src="https://avatars.githubusercontent.com/u/6403018?v=4" width="100" alt="" />
+        <img src="https://avatars.githubusercontent.com/u/6403018?v=4" width="100" alt="Jared Scheib" />
         <br />
         <sub>
           <b>Jared Scheib</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/mehrdadx10">
+        <img src="https://avatars.githubusercontent.com/u/4258955?v=4" width="100" alt="Mehrdad MotaghiFar" />
+        <br />
+        <sub>
+          <b>Mehrdad MotaghiFar</b>
         </sub>
       </a>
     </td>
