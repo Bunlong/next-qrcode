@@ -449,9 +449,9 @@ export default App;
 
 ## 📜 Changelog
 
-Latest version 2.5.0 (2023-07-05):
+Latest version 2.5.1 (2023-08-01):
 
-  * Upgrade dependencies
+  * Upgrade QRCode options API
 
 Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/next-qrcode/blob/master/CHANGELOG.md).
 

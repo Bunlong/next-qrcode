@@ -1,3 +1,13 @@
+## 2.5.1 (2023-08-01)
+
+### ✨ Features
+
+  * Upgrade QRCode options API
+
+Credits
+
+* [@Mehrdadx10](https://github.com/mehrdadx10)
+
 ## 2.5.0 (2023-07-05)
 
 ### ✨ Features
