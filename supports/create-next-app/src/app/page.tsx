@@ -1,11 +1,16 @@
-import type { NextPage } from 'next'
+'use client'
+
 import { useQRCode } from 'next-qrcode'
 
-const Home: NextPage = () => {
-  const { Canvas, Image, SVG } = useQRCode()
+export default function Home() {
+  const {
+    Canvas,
+    // Image,
+    // SVG,
+  } = useQRCode()
 
   return (
-    <>
+    <main>
       <Canvas
         text={'https://github.com/bunlong/next-qrcode'}
         options={{
@@ -57,8 +62,6 @@ const Home: NextPage = () => {
           },
         }}
       /> */}
-    </>
+    </main>
   )
 }
-
-export default Home

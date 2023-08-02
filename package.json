@@ -78,7 +78,7 @@
     "dist"
   ],
   "dependencies": {
-    "qrcode": "^1.5.1"
+    "qrcode": "^1.5.3"
   },
   "bundlesize": [
     {

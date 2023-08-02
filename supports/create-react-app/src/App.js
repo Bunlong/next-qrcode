@@ -4,7 +4,7 @@ function App() {
   const { SVG } = useQRCode();
 
   return (
-    <>
+    <div>
       <SVG
         text={'https://github.com/bunlong/next-qrcode'}
         options={{
@@ -20,7 +20,7 @@ function App() {
           },
         }}
       />
-    </>
+    </div>
   );
 }
 
