@@ -2,10 +2,15 @@ import React from 'react';
 const QRCode = require('qrcode');
 
 export interface Colors {
+  /** Color of dark module. Value must be in hex format (RGBA). Note: dark color should always be darker than color.light. */
   dark?: string;
+  /** Color of light module. Value must be in hex format (RGBA). */
   light?: string;
 }
 
+/**
+ * @deprecated This will be removed in the future and is replaced with `QRCodeOptionsCanvas`, `QRCodeOptionsSVG`, and `QRCodeOptionsImage`.
+ */
 export interface QRCodeOptions {
   type?: string;
   quality?: number;
@@ -16,28 +21,100 @@ export interface QRCodeOptions {
   color?: Colors;
 }
 
-export interface LogoOptions {
+interface QRCodeOptionsCommon {
+  /** Define how much wide the quiet zone should be. */
+  margin?: number;
+  /** Forces a specific width for the output image. If width is too small to contain the qr symbol, this option will be ignored. Takes precedence over scale. */
   width?: number;
+  color?: Colors;
+}
+
+export interface QRCodeOptionsCanvas extends QRCodeOptionsCommon {
+  /** Correction level. Possible values are low, medium, quartile, high or L, M, Q, H. */
+  errorCorrectionLevel?:
+    | 'low'
+    | 'medium'
+    | 'quartile'
+    | 'high'
+    | 'L'
+    | 'M'
+    | 'Q'
+    | 'H';
+  /** Scale factor. A value of 1 means 1px per modules (black dots). */
+  scale?: number;
+}
+
+export interface QRCodeOptionsSVG extends QRCodeOptionsCommon {}
+
+export interface QRCodeOptionsImage extends QRCodeOptionsCommon {
+  type?: 'image/png' | 'image/jpeg' | 'image/webp';
+  quality?: number;
+  /** Correction level. Possible values are low, medium, quartile, high or L, M, Q, H. */
+  errorCorrectionLevel?:
+    | 'low'
+    | 'medium'
+    | 'quartile'
+    | 'high'
+    | 'L'
+    | 'M'
+    | 'Q'
+    | 'H';
+  /** Scale factor. A value of 1 means 1px per modules (black dots). */
+  scale?: number;
+}
+
+export interface LogoOptions {
+  /** Logo dimension. */
+  width?: number;
+  /** If none or undefined, will center. */
   x?: number;
+  /** If none or undefined, will center. */
   y?: number;
 }
 
 export interface Logo {
+  /** The path to the image. */
   src: string;
+  /** Logo options. */
   options?: LogoOptions;
 }
 
+/**
+ * @deprecated This will be removed in the future and is replaced with `CanvasQRCode`, `SVGQRCode`, and `ImageQRCode`.
+ */
 export interface IQRCode {
   text: string;
   options?: QRCodeOptions;
   logo?: Logo;
 }
 
+interface IQRCodeCommon {
+  /** Text/URL to encode. */
+  text: string;
+}
+
+export interface CanvasQRCode extends IQRCodeCommon {
+  /** QR code logo. */
+  logo?: Logo;
+  /** QR code options. */
+  options?: QRCodeOptionsCanvas;
+}
+
+export interface SVGQRCode extends IQRCodeCommon {
+  /** QR code options. */
+  options?: QRCodeOptionsSVG;
+}
+
+export interface ImageQRCode extends IQRCodeCommon {
+  /** QR code options. */
+  options?: QRCodeOptionsImage;
+}
+
 function useImageComponent() {
   const ImageComponent = <T extends HTMLImageElement>({
     text,
     options,
-  }: IQRCode) => {
+  }: ImageQRCode) => {
     const inputRef = React.useRef<T>(null);
 
     React.useEffect(
@@ -56,7 +133,7 @@ function useImageComponent() {
       [text, options, inputRef],
     );
 
-    return <img ref={inputRef} />;
+    return <img ref={inputRef} alt={text} />;
   };
 
   const Image = React.useMemo(() => ImageComponent, []);
@@ -69,7 +146,7 @@ function useCanvasComponent() {
     text,
     options,
     logo,
-  }: IQRCode) => {
+  }: CanvasQRCode) => {
     const inputRef = React.useRef<T>(null);
 
     React.useEffect(
@@ -136,7 +213,7 @@ function useSVGComponent() {
   const SVGComponent = <T extends HTMLDivElement>({
     text,
     options,
-  }: IQRCode) => {
+  }: SVGQRCode) => {
     const inputRef = React.useRef<T>(null);
 
     React.useEffect(() => {
